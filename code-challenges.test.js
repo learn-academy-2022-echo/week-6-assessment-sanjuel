@@ -21,7 +21,25 @@ const people = [
 ]
 // Expected output: ["Ford Prefect is a hitchhiker.", "Zaphod Beeblebrox is president of the galaxy.", "Arthur Dent is a radio employee."]
 
+describe('arraySentance', () => {
+  it('takes in an array of objects and returns an array with a sentence about each person with their name capitalized', () => {
+    expect(arraySentance(people)).toEqual(["Ford Prefect is a hitchhiker.", "Zaphod Beeblebrox is president of the galaxy.", "Arthur Dent is a radio employee."])
+  })
+})
+
 // b) Create the function that makes the test pass.
+
+// Pseudo Code
+// Create a function named arraySentance
+// takes in an array with an object inside of it
+// map over the array 
+// access the name value in the array
+// change the letter at index 0 to uppercase
+// push that into a new array using string interpolation to add the occupation
+
+const arraySentance = (array) => {
+
+}
 
 // --------------------2) Create a function that takes in a mixed data array and returns an array of only the REMAINDERS of the numbers when divided by 3.
 
@@ -32,7 +50,22 @@ const hodgepodge1 = [23, "Heyyyy!", 45, -10, 0, "Yo", false]
 const hodgepodge2 = [5, "Hola", 43, -34, "greetings", true]
 // Expected output: [ 2, 1, -1 ]
 
+
+describe("remaindersOnly", () =>{
+  it("takes in a mixed data array and returns an array of only the REMAINDERS of the numbers when divided by 3", () => {
+    expect(remaindersOnly(hodgepodge1)).toEqual([ 2, 0, -1, 0 ])
+    expect(remaindersOnly(hodgepodge2)).toEqual([ 2, 1, -1 ])
+  })
+})
 // b) Create the function that makes the test pass.
+
+//Pseudo Code
+
+//Create a function named remaindersOnly
+//takes in an array
+//filter through the array since we are getting back an array with less values
+// use the typeof method to make sure it is a number
+// take the number and return it divided by three
 
 // --------------------3) Create a function that takes in an array of numbers and returns the sum of all the numbers cubed.
 
@@ -43,4 +76,17 @@ const cubeAndSum1 = [2, 3, 4]
 const cubeAndSum2 = [0, 5, 10]
 // Expected output: 1125
 
+describe("cubedSum", () =>{
+  it("takes in an array of numbers and returns the sum of all the numbers cubed", () => {
+    expect(cubedSum(cubeAndSum1)).toEqual(99)
+    expect(cubedSum(cubeAndSum2)).toEqual(1125)
+  })
+})
 // b) Create the function that makes the test pass.
+
+//Pseudo Code
+
+// create a function named cubedSum
+// takes in an array
+// iterate through that array and cube all of the numbers.
+// add all of those numbers together. 
